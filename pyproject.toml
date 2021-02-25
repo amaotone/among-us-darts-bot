@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "among-us-madmate-bot"
+version = "0.1.0"
+description = ""
+authors = ["Amane Suzuki <amane.suzu@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+"discord.py" = "^1.6.0"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.7.1"
+black = "^20.8b1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
