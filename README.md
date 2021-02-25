@@ -4,11 +4,13 @@
 
 MODが使えない環境でも「狂人」や「てるてる」が入ったAmong Usを楽しむことができます。
 
+※非力なサーバーで動かしているので、不具合があっても許してください
+
 ## 使い方
 
-[![](https://github.com/amaotone/among-us-darts-bot/blob/master/icon.png)](https://discord.com/api/oauth2/authorize?client_id=814485711238725652&permissions=11264&scope=bot)
+<a href="https://discord.com/api/oauth2/authorize?client_id=814485711238725652&permissions=11264&scope=bot"><img src="https://github.com/amaotone/among-us-darts-bot/blob/master/icon.png" width="200" height="200"></a>
 
-あらかじめ上のアイコンをクリックして、Botをdiscordサーバーに招待してください
+上のアイコンをクリックして、Botをdiscordサーバーに招待してください
 
 1人選ぶだけの場合
 

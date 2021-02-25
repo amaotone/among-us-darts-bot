@@ -4,7 +4,6 @@ import discord
 from discord.ext import commands
 from typing import Optional
 
-TOKEN = os.environ.get("DISCORD_BOT_TOKEN")
 intents = discord.Intents.default()
 intents.members = True
 bot = commands.Bot(command_prefix=".", intents=intents)
@@ -28,4 +27,5 @@ async def darts(ctx: commands.Context, channel_name: str, name: Optional[str] = 
     await ctx.send(f"#{channel_name}が存在しません")
 
 
+TOKEN = os.environ.get("DISCORD_BOT_TOKEN")
 bot.run(TOKEN)
