@@ -1,43 +1,31 @@
 import os
-import re
 import random
 import discord
+from discord.ext import commands
+from typing import Optional
 
 TOKEN = os.environ.get("DISCORD_BOT_TOKEN")
-MESSAGE_PATTERN = re.compile(r"^/roll\s+#(?P<channel>\w+)\s?(?P<message>.*)")
 intents = discord.Intents.default()
 intents.members = True
-client = discord.Client(intents=intents)
+bot = commands.Bot(command_prefix=".", intents=intents)
 
 
-def get_voice_channel_members(message: discord.Message):
-    data = {"voice_channels": message.guild.voice_channels}
-    return data
-
-
-@client.event
-async def on_message(message: discord.Message):
-    text = message.content
-    match = MESSAGE_PATTERN.match(text)
-    if message.author.bot or match is None:
-        if text.startswith("/roll"):
-            await message.channel.send("Usage: `/roll #[voice_channel_name] [message]`")
+@bot.command()
+async def darts(ctx: commands.Context, channel_name: str, name: Optional[str] = None):
+    if ctx.author.bot:
         return
+    await ctx.message.delete()
 
-    channels = message.guild.voice_channels
+    channel_name = channel_name.lstrip("#")
+    channels = ctx.guild.voice_channels
     for ch in channels:
-        if ch.name == match.group("channel"):
+        if ch.name == channel_name:
             member = random.choice(ch.members)
-            msg = (
-                f"{match.group('message')}に選ばれました！"
-                if match.group("message")
-                else "あなたが選ばれました！"
-            )
+            msg = f"{name}に選ばれました！" if name is not None else "あなたが選ばれました！"
             await member.send(msg)
             return
 
-    await message.channel.send(f"#{match.group('channel')}は存在しません")
+    await ctx.send(f"#{channel_name}が存在しません")
 
 
-while True:
-    client.run(TOKEN)
+bot.run(TOKEN)
