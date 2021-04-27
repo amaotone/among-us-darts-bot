@@ -1,5 +1,9 @@
 # Among Us Darts Bot
 
+```
+現在こちらのbotは公開を停止しています。申し訳ありません。
+```
+
 ボイスチャンネルに入っている人の中からランダムで1人選んでDMを送るbotです。
 
 MODが使えない環境でも「狂人」や「てるてる」が入ったAmong Usを楽しむことができます。
@@ -8,9 +12,12 @@ MODが使えない環境でも「狂人」や「てるてる」が入ったAmong
 
 ## 使い方
 
-<a href="https://discord.com/api/oauth2/authorize?client_id=814485711238725652&permissions=11264&scope=bot"><img src="https://github.com/amaotone/among-us-darts-bot/blob/master/icon.png" width="200" height="200"></a>
+<!--<a href="https://discord.com/api/oauth2/authorize?client_id=814485711238725652&permissions=11264&scope=bot"><img src="https://github.com/amaotone/among-us-darts-bot/blob/master/icon.png" width="200" height="200"></a>-->
+<img src="https://github.com/amaotone/among-us-darts-bot/blob/master/icon.png" width="200" height="200">
 
-上のアイコンをクリックして、Botをdiscordサーバーに招待してください
+~上のアイコンをクリックして、Botをdiscordサーバーに招待してください。~
+
+現在は運用を停止しています。
 
 1人選ぶだけの場合
 
